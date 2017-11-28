@@ -1,0 +1,304 @@
+<html>
+    <body>
+        <div class="container">
+            <div class="form-group col-md-12">
+                <h1>Criar Ficha Catalográfica</h1>
+                <!--<form action="/fichacatalografica/ficha/report" method="post" name="formficha" class="form-horizontal formulario" id="formficha"> -->
+                <form accept-charset="utf-8" name="formficha" method="post" action="ficha_catalografica.php" class="form-horizontal formulario" id="formficha">
+                    <div class="form-group prop col-md-12">
+                        <p class="help-block">Todos os itens com * são obrigatórios</p>
+                    </div>
+
+                    <div class="row" >
+                        <div class="col-md-12">
+                            
+                            <div class="name">
+                                <label for="nome">Código cutter*: </label>
+                            </div>
+
+                            <div class="col-md-6 divFloat">
+                                <input type="text" name="cutter" class="form-control" value="" id="cutter" maxlength="10">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                        <div class="col-md-6 divFloat">
+                                <label for="nome">
+                                    <span style="font-style:italic;font-size:10px;">
+                                        <a href="https://www.otonielfeliciano.com.br/cutters-online/" target="_blank">Gerador de código cutter online</a>
+                                    </span>
+                                </label>
+                            </div>
+                            </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="name">
+                                <label for="nome">Nome e primeiros sobrenomes*: </label>
+                            </div>
+
+                            <div class="value">
+                                <input type="text" name="nome" class="form-control " value="" id="nome" placeholder="Ex. Márcia Andreia Albuquerque da." required>
+                            </div>
+
+                            <label for="nome">
+                                <span style="font-style:italic;font-size:10px;">
+                                    Nome e primeiros sobrenomes. (Ex. Márcia Andreia Albuquerque da. Ex.2.: João de Souza da)
+                                </span>
+                            </label>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="name">
+                                <label for="sobrenome">Sobrenome*:</label>
+                            </div>
+                            <div class="value">
+                                <input type="text" name="sobrenome" class="form-control " maxlength="50" value="" id="sobrenome" placeholder="Ex.: Silva Filho, Oliveira Neto" required>
+                            </div>
+                            <label for="nome">
+                                <span style="font-style:italic;font-size:10px;">
+                                    Apenas o ùltimo sobrenome. Em caso de parentesco, este deve ser inserido após o último sobrenome (Ex.: Silva Filho, Oliveira Neto).
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row ">
+                        <div class="col-md-12">
+                            <div class="name">
+                                <label for="tituloTrabalho">Título Trabalho*: </label>
+                            </div>
+                            <div class="value">
+                                <input type="text" class="form-control" name="tituloTrabalho" value="" id="tituloTrabalho" required>
+                            </div>
+                            <label for="nome">
+                                <span style="font-style:italic;font-size:10px;">
+                                    Não deve ser utilizada apenas letras maiúsculas! Utilize letras maiúsculas somente para o início do título, siglas ou nomes próprios.
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="name">
+                                <label for="subTituloTrabalho">Sub Titulo Trabalho*:</label>
+                            </div>
+                            <div class="value">
+                                <input type="text" class="form-control" name="subTituloTrabalho" value="" id="subTituloTrabalho" required>
+                            </div>
+                            <label for="nome">
+                                <span style="font-style:italic;font-size:10px;">
+                                    Não deve ser utilizada apenas letras maiúsculas!
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                     <div class="row">
+                        <div class="col-md-12">
+                            <div class="name">
+                                <label for="cursoPrograma">Curso Programa*:</label>
+                            </div>
+                            <div class="value">
+                                <input class="form-control" name="cursoPrograma" id="cursoPrograma" required>
+                            </div>
+                            <label for="nome">
+                                <!--<span style="font-style:italic;font-size:9px;">
+                                    Clique na lupa para abrir a janela de opções e digite o nome do curso ou programa.
+                                </span>-->
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="name">
+                                <label for="tipoTrabalho">Tipo Trabalho*:</label>
+                            </div>
+                            <div class="value">
+                                <label class="radio-inline">
+                                    <input type="radio" name="tipoTrabalho" value="tese"> Tese
+                                </label>
+
+                                <label class="radio-inline">
+                                    <input type="radio" name="tipoTrabalho" value="dissertacao"> Dissertação
+                                </label>
+
+                                <label class="radio-inline">
+                                    <input type="radio" name="tipoTrabalho" value="tccEspecializacao"> TCC (Especialização)
+                                </label>
+
+                                <label class="radio-inline">
+                                    <input type="radio" name="tipoTrabalho" value="tccGraduacao"> TCC (Graduação)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row formTop">
+                        <div class="col-md-12 orientador campoNome">
+                            <div class="name">
+                                <label for="nomeOrientador">Nome do Orientador(a)*:</label>
+                            </div>
+                            
+                            <div class="col-md-6 divFloat" id="dynamicInput1">
+                                <input type="text" class="form-control" name="nomeOrientador[]" maxlength="100" value="" id="nomeOrientador" placeholder="Ex.: Oliveira, Jóse Carlos dos Santos" required>
+                            </div>
+
+                            <div class="col-md-2">
+                                <button class="btn btn-success" type="button" onClick="addInput('dynamicInput1');">
+                                    <span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Adicionar mais
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                       
+                    <div class="row formTop">
+                        <div class=" col-md-12 nomeCoOrientador">
+                            <div class="name">
+                                <label for="nomeCoOrientador">Nome Co-Orientador(a):</label>
+                            </div>
+                            <div class="col-md-6 divFloat" id="dynamicInput2">
+                                <input type="text" class="form-control " name="nomeCoOrientador[]" maxlength="100" value="" id="nomeCoOrientador" placeholder="Ex.: Oliveira, Jóse Carlos dos Santos" required>
+                            </div>
+                            <!--<label for="nome">
+                                <span style="font-style:italic;font-size:9px;">
+                                    Apenas o ùltimo sobrenome antes da vŕgula. Em caso de parentesco, este deve ser inserido após o último sobrenome (Ex.: Silva Filho, Oliveira Neto)
+                                </span>
+                            </label>-->
+
+                            <div class="col-md-2">
+                                <button class="btn btn-success co-orientador_add" type="button" onClick="addInput('dynamicInput2');">
+                                    <span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Adicionar mais
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="name">
+                                <label for="ilustracoes">Ilustrações*:</label>
+                            </div>
+
+                            <div class="value">
+                                <div class="form-check form-check-inline">
+                                    <label class="check-inline">
+                                        <input type="checkbox" id="ilustracoes" name="ilustracoes[]" value = "il." > Preto e Branco&nbsp;&nbsp;&nbsp;
+                                    </label>
+                              
+                                    <label class="check-inline">
+                                        <input  type="checkbox" id="ilustracoes" name="ilustracoes[]" value = "color."> Colorido 
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row formTop">
+                        <div class="col-md-3">
+                            <div class="name">
+                                <label for="alturaFolha">Altura Folha*:</label>
+                            </div>
+                            <div class="value">
+                                <!--<label for="alturaFolha">31</label>-->
+                                <input type="number" min="1" class="form-control" name="alturaFolha" value="" id="alturaFolha" placeholder= "Centímetros" >
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="name">
+                                <label for="ano">Ano*:</label>
+                            </div>
+                            <div class="value ">
+                                <input type="text" class="form-control" name="ano" value="" maxlength="4" id="ano">
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-5">
+                            <div class="name">
+                                <label for="numeroArabico">Número de páginas*:</label>
+                            </div>
+
+                            <div class="col-md-7 divFloat">
+                                <input type="number" min="1" class="form-control" name="numeroArabico" value="" id="numeroArabico" placeholder="Nº Arábico">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row formTop">
+                        <div class="col-md-3">
+                            <div class="name">
+                                <label for="palavraChave1">Palavra-Chave 1*:</label>
+                            </div>
+                            <div class="value">
+                                <input type="text" title="Não usar fórmulas. Em caso de termo cientifico, utilizar também o nome popular - Ex: Apis mellifera(Abelha)." class="form-control " name="palavraChave1" maxlength="50" value="" id="palavraChave1" required>
+                            </div>
+                            <!--<label for="nome">
+                                <span style="font-style:italic;font-size:9px;">
+                                    Não usar fórmulas. Em caso de termo cientifico, utilizar também o nome popular - Ex: Apis mellifera(Abelha).
+                                </span>
+                            </label>-->
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="name">
+                                <label for="palavraChave2">Palavra-Chave 2*:</label>
+                            </div>
+                            <div class="value">
+                                <input type="text" class="form-control " name="palavraChave2" maxlength="50" value="" id="palavraChave2" required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="name">
+                                <label for="palavraChave3">Palavra-Chave 3*:</label>
+                            </div>
+                            <div class="value">
+                                <input type="text" class="form-control " name="palavraChave3" maxlength="50" value="" id="palavraChave3" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row formTop">
+                        <div class="col-md-3">
+                            <div class="name">
+                                <label for="palavraChave4">Palavra-Chave 4*:</label>
+                            </div>
+                            <div class="value">
+                                <input type="text" class="form-control " name="palavraChave4" maxlength="50" value="" id="palavraChave4">
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="name">
+                                <label for="palavraChave5">Palavra-Chave 5:</label>
+                            </div>
+                            <div class="value">
+                                <input type="text" class="form-control " name="palavraChave5" maxlength="50" value="" id="palavraChave5">
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="row formTop">
+                        <b>
+                            <input type="submit" name="create" class="btn btn-primary button" value="Gerar Ficha Catalográfica" onclick="return confirm('A Ficha gerada deve ser salva em PDF e impressa junto com o trabalho')" id="create">
+                        </b>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
