@@ -1,5 +1,5 @@
 <html>
-    <body>
+	<body>
         <div class="container">
             <div class="form-group col-md-12">
                 <h1>Criar Ficha Catalográfica</h1>
@@ -110,11 +110,6 @@
                             <div class="value">
                                 <input class="form-control" name="cursoPrograma" id="cursoPrograma" required>
                             </div>
-                            <label for="nome">
-                                <!--<span style="font-style:italic;font-size:9px;">
-                                    Clique na lupa para abrir a janela de opções e digite o nome do curso ou programa.
-                                </span>-->
-                            </label>
                         </div>
                     </div>
 
@@ -154,7 +149,7 @@
                             </div>
 
                             <div class="col-md-2">
-                                <button class="btn btn-success" type="button" onClick="addInput('dynamicInput1');">
+                                <button class="btn btn-success" type="button" onClick="addOrientador('dynamicInput1');">
                                     <span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Adicionar mais
                                 </button>
                             </div>
@@ -165,19 +160,14 @@
                     <div class="row formTop">
                         <div class=" col-md-12 nomeCoOrientador">
                             <div class="name">
-                                <label for="nomeCoOrientador">Nome Co-Orientador(a):</label>
+                                <label for="nomeCoOrientador">Nome do Coorientador(a):</label>
                             </div>
                             <div class="col-md-6 divFloat" id="dynamicInput2">
-                                <input type="text" class="form-control " name="nomeCoOrientador[]" maxlength="100" value="" id="nomeCoOrientador" placeholder="Ex.: Oliveira, Jóse Carlos dos Santos" required>
+                                <input type="text" class="form-control " name="nomeCoorientador[]" maxlength="100" value="" id="nomeCoorientador" placeholder="Ex.: Oliveira, Jóse Carlos dos Santos" required>
                             </div>
-                            <!--<label for="nome">
-                                <span style="font-style:italic;font-size:9px;">
-                                    Apenas o ùltimo sobrenome antes da vŕgula. Em caso de parentesco, este deve ser inserido após o último sobrenome (Ex.: Silva Filho, Oliveira Neto)
-                                </span>
-                            </label>-->
 
                             <div class="col-md-2">
-                                <button class="btn btn-success co-orientador_add" type="button" onClick="addInput('dynamicInput2');">
+                                <button class="btn btn-success co-orientador_add" type="button" onClick="addCoorientador('dynamicInput2');">
                                     <span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Adicionar mais
                                 </button>
                             </div>
