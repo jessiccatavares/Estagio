@@ -1,0 +1,48 @@
+<html>
+    <script>
+        var i=1;
+        var x=1;
+        function addOrientador(orientador){
+            i++;
+            var newOrientador = document.createElement('div');
+            newOrientador.innerHTML =
+                '<div class="row formTop">'+
+                '   <div class="col-md-12 orientador campoNome">'+
+                '       <div name="qtdOrientador" value="'+i+'" id="row'+i+'" >' +
+                '           <div  class="col-md-10 divFloat formTop">' +
+                '               <input type="text" class="form-control" name="nomeOrientador[]" maxlength="100" value=""' + 'id="nomeOrientador">' +
+                '           </div>' +
+                '           <div class="col-md-2 formTop">' +
+                '               <button type="button" name="remove" id="'+i+'" ' + 'class="btn btn-danger btn_remove">X</button>' +
+                '           </div>' +
+                '       </div>'+
+                '   </div>'+
+                '</div>';
+            document.getElementById(orientador).appendChild(newOrientador);
+        };
+
+        function addCoorientador(coorientador){
+            x++;
+            var newCoorientador = document.createElement('div');
+            newCoorientador.innerHTML = 
+                '<div class="row formTop">'+
+                '   <div class="col-md-12">'+
+                '       <div name="qtdCoOrientador" value="'+x+'" id="row'+x+'" >' +
+                '           <div  class="col-md-10 divFloat formTop">' +
+                '               <input type="text" class="form-control " name="nomeCoorientador[]" maxlength="100" value=""' + 'id="coorientador">' +
+                '           </div>' +
+                '           <div class="col-md-2 formTop">' +
+                '               <button type="button" name="remove" id="'+x+'" ' + 'class="btn btn-danger btn_remove">X</button>' +
+                '           </div>' +
+                '       </div>'+
+                '   </div>'+
+                '</div>';
+            document.getElementById(coorientador).appendChild(newCoorientador);
+        };
+
+        $(document).on('click', '.btn_remove', function(){
+            var button_id = $(this).attr("id");
+            $('#row'+button_id+'').remove();
+        });
+    </script>
+</html>

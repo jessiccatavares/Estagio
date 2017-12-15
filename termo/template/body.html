@@ -1,0 +1,121 @@
+<html>
+	<body>
+        <div class="container">
+            <div class="form-group col-md-12">
+                <h1>Termo de Autorização para Publicação Digital</h1>
+                <form accept-charset="utf-8" name="formtermo" method="post" action="termo.php" class="form-horizontal formulario" id="formficha">
+                    <div class="form-group prop col-md-12">
+                        <p class="help-block">Todos os itens com * são obrigatórios</p>
+                    </div>
+<!--**************************************************************************************************************************************************************************************************-->
+                    <div class="row" >
+                        <div class="col-md-12">
+                            
+                            <div class="name">
+                                <label for="nome">1. IDENTIFICAÇÃO DO MATERIAL BIBLIOGRÁFICO</label>
+                            </div>
+
+                            <div class="col-md-6 divFloat">
+                                <select name="material" required="required" class="form-control" id="material">
+                                    <option value="">Selecione o tipo de material</option>
+                                    <option value="tese" >Tese</option>
+                                    <option value="dissertacao" >Dissertação</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="linha row"> <hr> </div>
+<!--**************************************************************************************************************************************************************************************************-->
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="name">
+                                <label for="nome">2. IDENTIFICAÇÃO DO DOCUMENTO</label>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="row">
+                        <div class="col-md-12">
+                            <div class="name">
+                                <label for="nome">Curso*: </label>
+                            </div>
+
+                            <div class="value">
+                                <select name="material" required="required" class="form-control" id="material">
+                                    <option value=""> </option>
+                                    <option value="mestrado" >Mestrado</option>
+                                    <option value="doutorado" >Doutorado</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="row">
+                        <div class="col-md-12">
+                            <div class="name">
+                                <label>Programa de Pós-Graduação em*:</label>
+                            </div>
+
+                            <div class="value">
+                                <input type="text" name="programa" class="form-control " value="" id="programa" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="name">
+                                <label for="nome">Nome completo*: </label>
+                            </div>
+
+                            <div class="value">
+                                <input type="text" name="nome" class="form-control " value="" id="nome" required>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="linha row"> <hr> </div>
+<!--**************************************************************************************************************************************************************************************************-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="name">
+                                <label for="sobrenome">3. IDENTIFICAÇÃO DO DOCUMENTO</label>
+                            </div>
+                            <div class="value">
+                                <input type="text" name="sobrenome" class="form-control " maxlength="50" value="" id="sobrenome" placeholder="Ex.: Silva Filho, Oliveira Neto" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="linha row"> <hr> </div>
+<!--**************************************************************************************************************************************************************************************************-->
+                    <div class="row ">
+                        <div class="col-md-12">
+                            <div class="name">
+                                <label for="tituloTrabalho">4. INFORMAÇÕES DE ACESSO AO DOCUMENTO</label>
+                            </div>
+                            <div class="value">
+                                <input type="text" class="form-control" name="tituloTrabalho" value="" id="tituloTrabalho" required>
+                            </div>
+                        </div>
+                    </div>
+<!--**************************************************************************************************************************************************************************************************-->
+                     <div class="row formTop">
+                        <b>
+                            <input type="submit" name="create" class="btn btn-primary button" value="Gerar Termo" onclick="return confirm('A Ficha gerada deve ser salva em PDF e impressa junto com o trabalho')" id="create">
+                        </b>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

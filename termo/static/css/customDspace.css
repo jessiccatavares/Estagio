@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.footer{
+    margin-bottom: 0;
+}
+
+.navbar-inverse{
+    background-image: linear-gradient(to bottom,#2d6896 0,#3b84c3 100%);
+
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #306c9c;
+    overflow-x: hidden;
+}
+
+
+.pull-left{
+    color: #9dc1de;
+}
+
+.navbar-inverse .navbar-nav>.active>a {
+    background-color: #2d6896;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+}
+
+.navbar-inverse {
+    background-color: #3b84c3;
+    border-color: #3b84c3;
+}
+
+.navbar-inverse .navbar-nav>.active>a {
+    background-color: #3b84c3;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+    color: #fff;
+    background-color: #3b84c3;
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
+    color: #fff;
+    background-color: #3b84c3;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #fff;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: #3b84c3;
+}
+
+.img-logo-button{
+    width:4%;
+    float: left;
+}
+
+.img-ibict-logo{
+    height: 4%;
+    opacity:0.5;
+}
+
+.text-uea{
+    font-size:9pt;
+    padding-left: 7px;
+}
+
+#footer_feedback {
+     padding-top: 0;
+}

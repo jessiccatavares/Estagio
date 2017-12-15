@@ -1,0 +1,22 @@
+.formulario{
+    border: solid 1px #C0C0C0;
+    padding: 40px;
+}
+
+.formTop{
+    margin-top: 5px;
+}
+
+.input-sm{
+    width: 400px;
+    float: left;
+    margin-right: 10px;
+}
+
+.divFloat{
+    padding-left: 0;
+}
+
+.button{
+    float: right;
+}
