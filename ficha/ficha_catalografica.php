@@ -26,7 +26,7 @@
         // carrega o pacote de geração de PDF
         require('pdf-php/class.ezpdf.php');
 
-        $cutter = $_POST["cutter"];
+        //$cutter = $_POST["cutter"];
         $nome = $_POST["nome"];
         $sobrenome = $_POST["sobrenome"];
         $tituloTrabalho = $_POST["tituloTrabalho"]; 
