@@ -43,9 +43,11 @@
         $palavraChave2 = $_POST["palavraChave2"];  
         $palavraChave3 = $_POST["palavraChave3"];  
         $palavraChave4 = $_POST["palavraChave4"];  
-        $palavraChave5 = $_POST["palavraChave5"];       
+        $palavraChave5 = $_POST["palavraChave5"];
 
-        //$codigo1 = substr($sobrenome,0,1); //retorna a primeira letra do sobrenome
+        require('cutter/cutter.php');
+
+        /*$codigo1 = substr($sobrenome,0,1); //retorna a primeira letra do sobrenome
         
         // separa o título por espaços em branco e verifica a primeira palavra
         // se a primeira palavra for uma stopword, o $codigo2 será a primeira letra da segunda palavra do título
@@ -69,7 +71,7 @@
 
         }
         // monta o Código Cutter
-        $codigo = $cutter.$codigo2;
+        $codigo = $cutter.$codigo2;*/
         
         if(!empty($ilustracoes)){
             $formato = implode(", ",$ilustracoes);
